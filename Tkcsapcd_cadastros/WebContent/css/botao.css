@@ -1,0 +1,40 @@
+@CHARSET "ISO-8859-1";
+input[type=button]{
+	padding: 2px;
+	border:none;
+	border-radius:20px;
+	background-color:#059; /*cor original verde #056*/
+	color:#fff;
+}
+input[type=button]:hover{
+	background-color:#d12222;
+	color:#fff;
+	cursor:pointer;
+}
+#home{
+	float: right;
+	text-decoration: none;
+	margin: -10px 50px 0 0;
+}
+#home input{
+	background: #d15555;
+	width: 60px;
+}
+#sacesso{
+	float: right;
+	text-decoration: none;
+	margin: -10px 50px 0 0;
+}
+#sacesso input{
+	background: #d15555;
+	width: 60px;
+}
+#srecuperar{
+	float: right;
+	text-decoration: none;
+	margin: -10px 50px 0 0;
+}
+#srecuperar input{
+	background: #d15555;
+	width: 60px;
+}

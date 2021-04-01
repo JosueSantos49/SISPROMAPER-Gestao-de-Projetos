@@ -1,0 +1,131 @@
+/*Removendo bullets e colocando borda*/
+
+*{margin: 0; padding: 0;} 
+body{
+font-family: arial, helvetica, sans-serif;
+font-size: 13px;
+}
+ 
+.menu{
+list-style:none;
+border:1px solid #c0c0c0;
+float:left;
+}
+
+/*Estilizando itens do menu*/
+.menu li{
+position:relative;
+float:left;
+border-right:1px solid #8080C0;
+}
+
+/*Estilizando links - Aqui pode ser editado o menu tamanho da fonte, espesura, largura etc.*/
+.menu li a{color:#333; text-decoration:none; padding:6px 10px; display:block;font-size:11px;}
+ 
+.menu li a:hover{
+background:#ff4500;
+color:#fff;
+-moz-box-shadow:0 3px 10px 0 #CCC;
+-webkit-box-shadow:0 3px 10px 0 #ccc;
+text-shadow:0px 0px 5px #fff;
+}
+
+/*Escondendo submenu*/
+.menu li  ul{
+position:absolute;
+top:25px;
+left:0;
+background-color:#fff;
+display:none;
+}
+
+/*Exibindo submenu*/
+.menu li:hover ul, .menu li.over ul{
+	display:block;
+}
+
+/*Ajustes finais*/
+.menu li ul li{
+border:1px solid #c0c0c0;
+display:block;
+width:150px;
+}
+
+h4{
+	text-align: center;
+	font-size: 20px;	
+	font-family: Arial;
+	font-weight: bold;	
+	color: #fff;
+	height: 100%;
+	text-shadow: 0px 3px 0px #b2a98f,
+				 0px 14px 10px rgba(0,0,0,0.15),
+				 0px 14px 10px rgba(0,0,0,0.1),
+				 0px 14px 10px rgba(0,0,0,0.1);			
+}
+/*H5 esta formatando todos os contadores de resultado do textarea.*/
+/*h5{
+	text-align: center;
+	font-size: 15px;	
+	font-family: Arial;
+	font-weight: bold;	
+	color: #fff;
+	height: 100%;
+	text-shadow: 0px 3px 0px #b2a98f,
+				 0px 14px 10px rgba(0,0,0,0.15),
+				 0px 14px 10px rgba(0,0,0,0.1),
+				 0px 14px 10px rgba(0,0,0,0.1);			
+}*/
+/*Formatando o Tratamento de erro dos Formulários. Tambem configuração de todos textareas de uma só vez*/
+label {
+	width: 10em; 
+	float: left;
+	}
+label.error{ 
+	color:#FF6347; /*cor original é red, aqui é tratado as mensaguens (aviso para os clientes, que campos é obrigatório).*/
+	float:none; 
+	padding-left: 10px}
+/*div { 
+	clear: both; 
+	}*/
+
+.submit { 
+	margin-left: 10em;
+	}
+/*Atenção tudo que é entrada e os textareas de todos forms serão formatados (estilo.css)*/
+/*input, textarea { height:15em; width: 50em; }*/
+
+.input:focus{	background-color:#E7E8E7;	}
+
+/*Formatação botão vermelho*/
+input[type=button]{
+	padding: 5px;
+	border:none;
+	border-radius:20px;
+	background-color:#059; /*cor original verde #056*/
+	color:#fff;
+}
+input[type=button]:hover{
+	background-color:#d12222;
+	color:#fff;
+	cursor:pointer;
+}
+
+#home{
+	float: right;
+	text-decoration: none;
+	margin: -10px 50px 0 0;
+}
+#home input{
+	background: #d15555;
+	width: 60px;
+}
+
+
+
+
+
+
+
+
+

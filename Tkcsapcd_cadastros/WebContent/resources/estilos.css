@@ -1,0 +1,7 @@
+@CHARSET "UTF-8";
+
+/*Definindo tamanho da fonte do theme*/
+.ui-widget, .ui-widget .ui-widget {
+	font-size: 14px !important;
+}
+

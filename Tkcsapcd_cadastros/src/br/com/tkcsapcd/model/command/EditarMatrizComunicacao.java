@@ -1,0 +1,48 @@
+/* 
+	Autor: Josué da Conceição Santos
+	E-mail: conceicaojosue@outlook.com.br
+	Ano: 2015
+ */
+package br.com.tkcsapcd.model.command;
+
+import java.sql.SQLException;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import br.com.tkcsapcd.model.dao.InterfaceMatrizComunicacaoDAO;
+
+public class EditarMatrizComunicacao implements InterfaceCommand {
+
+	private InterfaceMatrizComunicacaoDAO matrizComunicacaoDAO;
+	public EditarMatrizComunicacao(InterfaceMatrizComunicacaoDAO matrizComunicacaoDAO) {
+		super();
+		this.matrizComunicacaoDAO = matrizComunicacaoDAO;
+	}
+	@Override
+	public String execute(HttpServletRequest request,	HttpServletResponse response)throws Exception  {			
+			try{						
+					if(request.getParameter("codigo") == null)
+					{
+						request.setAttribute("titulo", "Cadastro - MATRIZ DAS COMUNICAÇÕES");
+						return "cadastro_matriz_comunicacao.jsp";
+					}
+					
+					//Grande jogada				
+					request.setAttribute("matrizComunicacao", matrizComunicacaoDAO.getMatrizComunicacao(Integer.valueOf(request.getParameter("codigo"))));
+					
+					} catch (NumberFormatException e) {
+						
+						// Se o numero não for válido
+						request.setAttribute("mensagem", "Valo do código inválido:"+request.getParameter("codigo"));
+						
+					} catch (SQLException e) {
+						 
+						request.setAttribute("mensagem", "Problema com acesso a basde de dados: "+e.getMessage());
+						e.printStackTrace();
+					}				
+						//Caso funcione td corretamente. Seta o atributo
+						request.setAttribute("titulo", "Atualização - MATRIZ DAS COMUNICAÇÕES");				
+						return "atualiza_matriz_comunicacao.jsp";
+			}
+	}

@@ -1,0 +1,190 @@
+@CHARSET "ISO-8859-1";
+*{
+	padding: 0;
+	margin:0;
+	list-style:none;
+	text-decoration:none;
+}
+input[type=button]{
+	padding: 5px;
+	border:none;
+	border-radius:20px;
+	background: #2E8B57 ;/*Cor do input verde*/
+	/*background-color:#059; cor original verde #056*/
+	color:#fff;
+}
+input[type=button]:hover{
+	background-color:#d12222;
+	color:#fff;
+	cursor:pointer;
+}
+input[type=submit]{
+	padding: 5px;
+	border:none;
+	border-radius:20px;
+	background-color:#4682B4; /*cor original verde #056*/
+	color:#fff;
+}
+input[type=submit]:hover{
+	background-color:#d12222;
+	color:#fff;
+	cursor:pointer;
+}
+h1{
+	padding:10px;
+	margin:0px 0 10px 0;
+	color:#ffffff;
+	font-family: Arial;
+	/*text-decoration: underline;*/
+	text-align:left;
+	height: 1000%;
+	width: 98%;
+	background: #2E8B57 ;/*Cor da barra verde*/
+	/*background-color: #059;  cor original verde #347c8b / cor azul*/
+	box-shadow:0 0 5px #000;
+}
+h3{
+	padding:10px;
+	margin:0px 0 10px 0;
+	font-family: Arial;
+	text-align:left;
+	height:30%;
+	width: 98%;
+	background: #2E8B57 ;/*Cor da barra verde*/
+	/*background-color: #059;  cor original verde #347c8b*/
+	box-shadow:0 0 5px #000;
+}
+
+
+#container{
+	width:1320px;
+	min-width:1280px;
+	margin:0 auto;
+	border:0px solid; 
+}
+#tabela{
+	margin:10px auto;
+	width:auto;
+	min-width:100%;
+	border: 1px solid;
+	border-spacing: 0;
+}
+#tabela th{
+	padding:5px;
+	width:150px;
+	background-color:beige;/* #069 Cor das duas primeiras linhas da tabela */
+	font-size: 11px;
+	color:;
+	text-align: center;
+}
+#tabela td{
+	padding:5px;
+	width: auto;
+	border-bottom:1px solid #696969;
+	text-align:center;
+	color:#696969;
+	font-family:Arial;
+	font-size:12px;
+	text-transform: uppercase;
+}
+#tabela tr:hover td{
+	background-color: #c2ebd2;
+	color:#d10;
+}
+
+#formFiltro{
+	padding:10px;
+	width:288px;
+	margin:30px 0 10px 0px;
+	border:1px solid #888;
+	border-radius:25px;
+	box-shadow:0 0 5px #888;
+	background-color: rgba(155,100,100,.2);
+}
+#formFiltro label {
+	font-family: Arial;
+	font-size:13px;
+	text-transform: uppercase;
+	color:#069;
+	
+}
+#formFiltro input[type=text] {
+	padding: 5px;
+	margin: 0 5px 0 5px;
+	border-radius:15px;
+}
+#msg{
+	float:left;
+	width:350px;
+	margin:-20px 0 0 80px;
+	font-size: 18px;
+	color:#d12;
+	text-shadow: 0 0 1px #000;
+}
+#back{
+	width: 120px;
+	box-shadow:0 0 1px #000;
+	text-align: center;
+}
+.img:hover{
+	transform:scale(1.2);
+}
+#tbPrincipal{
+	margin: 100px auto;
+}
+#tbPrincipal td{
+	padding: 25px;
+}
+#tbPrincipal td input{
+	padding: 30px;
+	box-shadow:0 3px 2px #000;
+}
+#logout{
+	float: right;
+	text-decoration: none;
+	margin: -10px 50px 0 0;
+}
+#logout input{
+	background: #d15555;
+	width: 130px;
+}
+.foto{
+	width:85px;
+	position: absolute;
+	margin-top: -30px;
+}
+#btnVoltar:hover{
+	font-family: Arial;
+	color: #000;
+	background: #069;
+	text-align:center;
+	border-radius:9px;
+	box-shadow:0 2px 2px #000;
+	margin-left: 15px;
+	cursor: pointer;
+}
+#btnVoltar{
+	font-family: Arial;
+	font-size:25px;
+	color: #000;
+	background: #d35;
+	width: 230px;
+	text-align:center;
+	border-radius:9px;
+	box-shadow:0 2px 2px #000;
+	margin-left: 15px;
+}
+#btnVoltar a{
+	font-family: Arial;
+	color: #fff;
+	width: 150px;	
+}
+
+
+
+
+
+
+
+
+

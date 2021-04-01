@@ -1,0 +1,60 @@
+@CHARSET "ISO-8859-1";
+/*HEADER*/
+.navbar {
+	margin-bottom: 0;
+}
+.jumbotron {
+	background: #428BCA;
+	color: #fff;
+	padding: 20px 0;	
+}
+/*--------------------------------------------------------------------------
++	Clients Logos Style
+--------------------------------------------------------------------------*/
+.clients-logo-wrapper img {
+  max-width: 130%;
+}
+/*POST*/
+.main {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.post {
+	padding-bottom: 20px;
+	margin-bottom:20px;
+	border-bottom: 1px solid #999;
+}
+
+.post .post-title a {
+	color:#333;
+}
+
+.post .thumb {
+	margin-right: 10px;
+	width: 40%;
+}
+
+.post .thumb img {
+	width: 100%;
+}
+
+.post .contenedor-botones{
+	width: 100%;
+}
+
+/*Formatação botão Zoom*/
+input[type=button]{
+	padding: 2px;
+	border:none;
+	border-radius:20px;
+	background-color:#059; /*cor original verde #056*/
+	color:#fff;
+}
+input[type=button]:hover{
+	background-color:#d12222;
+	color:#fff;
+	cursor:pointer;
+}
+/*Fim Formatação botão Zoom*/
+

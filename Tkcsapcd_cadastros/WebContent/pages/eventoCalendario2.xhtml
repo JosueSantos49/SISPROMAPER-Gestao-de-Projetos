@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:decorate xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui" 
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	template="../templates/template.xhtml">
+
+	<ui:define name="conteudo">
+
+		<p:growl id="mensagem" />
+
+		<h:form id="formListagem">
+			<p:panel header="Evento Calendarios - Listagem">
+				<p:dataTable id="tabela" emptyMessage="Nenhum registro encontrado."
+					paginator="true" value="#{eventoCalendarioBean2.eventoCalendarios}" var="eventoCalendario"
+					rows="15">
+					<f:facet name="header">
+						<p:commandButton value="Imprimir" actionListener="#{eventoCalendarioBean2.imprimir}"/>					
+					</f:facet>
+
+					<p:column headerText="Título" sortBy="#{eventoCalendario.titulo}"
+						filterBy="#{eventoCalendario.titulo}">
+						<h:outputText value="#{eventoCalendario.titulo}" />
+					</p:column>
+
+					<p:column headerText="Início" sortBy="#{eventoCalendario.inicio}"
+						filterBy="#{eventoCalendario.inicio}">
+						<h:outputText value="#{eventoCalendario.inicio}" >
+							<f:convertDateTime pattern="dd/MM/yyyy" />
+						</h:outputText>
+					</p:column>
+					
+					<p:column headerText="Fim" sortBy="#{eventoCalendario.fim}"
+						filterBy="#{eventoCalendario.fim}">
+						<h:outputText value="#{eventoCalendario.fim}" >
+							<f:convertDateTime pattern="dd/MM/yyyy" />
+						</h:outputText>
+					</p:column>
+					
+					<p:column headerText="Status" sortBy="#{eventoCalendario.status}"
+						filterBy="#{eventoCalendario.status}">
+						<h:outputText value="#{eventoCalendario.status}" 
+							converter="#{converterBooleanString}">
+						</h:outputText>
+					</p:column>
+					
+					<p:column headerText="Descrição" sortBy="#{eventoCalendario.descricao}"
+						filterBy="#{eventoCalendario.descricao}">
+						<h:outputText value="#{eventoCalendario.descricao}" />
+					</p:column>
+
+					<p:column headerText="Opções">
+						
+						<p:commandButton icon="ui-icon-trash"
+							actionListener="#{eventoCalendarioBean2.excluir}"
+							update=":mensagem :formListagem:tabela">
+							<p:confirm header="Confirmação"
+								message="Deseja excluir o evento?" icon="ui-icon-alert"></p:confirm>
+							<f:attribute name="eventoCalendarioSelecionado" value="#{eventoCalendario}" />
+						</p:commandButton>
+
+					</p:column>
+				</p:dataTable>
+
+				<p:confirmDialog global="true">
+					<p:commandButton value="Sim" type="button"
+						styleClass="ui-confirmdialog-yes" icon="ui-icon-check" />
+					<p:commandButton value="Não" type="button"
+						styleClass="ui-confirmdialog-no" icon="ui-icon-close" />
+				</p:confirmDialog>
+
+			</p:panel>
+		</h:form>
+
+
+	</ui:define>
+</ui:decorate>

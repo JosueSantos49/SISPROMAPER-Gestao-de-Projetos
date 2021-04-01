@@ -1,0 +1,300 @@
+/***RESET***/
+* {
+  padding: 0;
+  margin: 0;
+}
+p{
+	font: 13px Verdana, Geneva, sans-serif;
+	padding: 5px;
+	text-align: center;
+	color: #CCC;
+	font-weight: bold;
+	font-size: 24px;
+	font-style: italic;
+}
+
+body { background-image: url(../imagens/papel.png);
+	     background-repeat:repeat-x;
+		 background-attachment: fixed;
+}
+
+/***CORPO***/
+#tudo{
+  width:1150px;
+  margin:0 auto;
+}
+#header{
+	width:1200px;/*Nosso titulo de toda da pagina*/
+	height:150px;
+}
+.logo{
+	width: 300px;
+	height: 130px;
+	float: left;
+	margin: 0px;
+	color: #fff;
+	text-align: center;
+}
+.social{
+	width:200px;
+	height:100px;
+	float:right;
+}
+.social a{
+	width:25px;
+	height:25px;
+	margin:5px;
+	float:right;
+}
+.busca{
+	width:300px;
+	height:40px;
+	margin-top:0;
+	margin-left:300px;
+	float:right;
+}
+.input_buscar{
+	width:200px;
+	height:27px;
+	border:1px solid #09f;
+	background:#fff;
+	color:#09f;
+}
+.btn{
+	width:85px;
+	height:28px;
+	background:#09f;
+	color:#FFF;
+	cursor:pointer;
+}
+.input{
+	height:25px;
+}
+/****MENU****/
+#menu{
+	width:1150px;
+	height:25px;
+	margin-top:0px;
+	margin-left:0px;
+	float:left;
+	background:#09f;
+	border-radius:10px;
+}
+#menu ul {
+    padding:0px;
+    margin-left:250px;
+    list-style:none;
+}
+#menu ul li { display: inline;}
+#menu ul li a {
+    padding: 2px 28px;
+    display: inline-block;
+    color: #FFF;
+	font:18px Arial;
+	margin-left:10px;
+    text-decoration: none;
+	border-radius:5px;
+}
+#menu ul li a:hover {
+    background-color:#fff;
+    color: #09f;
+}
+#txt_texto{
+	width:1000px;
+	height:100px;
+	margin-top:100px;
+	float:left;
+	background:#000;
+	color:#FFF;
+}
+/****CORPO ABAIXO DO MENU***/
+#corpo{
+	width: 1150px;
+	margin-top: 0px;
+	float: left;
+	background: #FFFFFF;/*#D1F0FA*/
+	border-radius: 10px;
+	font-size: 12px;
+}
+#corpo a{
+	float:right;
+	font:25px arial;
+	color:#09f;
+	text-decoration:none;
+}
+#corpo ul li{
+	width:250px;
+	height:250px;
+	margin-top:0px;
+	float:left;
+	margin:40px;
+	list-style: none;
+}
+#corpo2{
+	width:1000px;
+	margin-top:0px;
+	float:left;
+	background:#D1F0FA;
+	border-radius:10px;
+}
+#corpo2 a{
+	width:900px;
+	float:right;
+	font:25px arial;
+	color:#09f;
+	text-decoration:none;
+	background:#D1F0oi;
+}
+#corpo2 ul li{
+	width:1000px;
+	height:250px;
+	margin-top:0px;
+	float:right;
+	background:#D1F0oi;
+	margin:40px;
+	list-style: none;
+}
+/****CORPO ABAIXO DO MENU manutencao.jsp #D1F0FA***/
+#corpoFrameesquerdo{
+	width: 1150px;
+	margin-top: 0px;
+	float: left;
+	background: #FFFFFF;
+	border-radius: 10px;
+	color: #000;
+}
+#corpo a{
+	float:right;
+	font:25px arial;
+	color:#09f;
+	text-decoration:none;
+}
+#corpo ul li{
+	width:250px;
+	height:250px;
+	margin-top:0px;
+	float:left;
+	margin:40px;
+	list-style: none;
+}
+#corpo2{
+	width:1000px;
+	margin-top:0px;
+	float:left;
+	background:#D1F0FA;
+	border-radius:10px;
+}
+#corpo2 a{
+	width:900px;
+	float:right;
+	font:25px arial;
+	color:#09f;
+	text-decoration:none;
+	background:#D1F0oi;
+}
+#corpo2 ul li{
+	width:1000px;
+	height:250px;
+	margin-top:0px;
+	float:right;
+	background:#D1F0oi;
+	margin:40px;
+	list-style: none;
+}
+/****MENU manutencao.jsp(Página de Manutenção) #09f****/
+#menuManutencao{
+	width:1150px;
+	height:25px;
+	margin-top:0px;
+	margin-left:0px;
+	float:left;
+	background:#09f;/*#BF3EFF*/
+	border-radius:10px;
+}
+#menuManutencao ul {
+    padding:0px;
+    margin-left:250px;
+    list-style:none;
+}
+#menuManutencao ul li { display: inline;}
+#menuManutencao ul li a {
+    padding: 2px 28px;
+    display: inline-block;
+    color: #FFF;
+	font:18px Arial;
+	margin-left:10px;
+    text-decoration: none;
+	border-radius:5px;
+}
+#menuManutencao ul li a:hover {
+    background-color:#fff;
+    color: #09f;
+}
+#txt_texto{
+	width:1000px;
+	height:100px;
+	margin-top:100px;
+	float:left;
+	background:#000;
+	color:#FFF;
+}
+
+/***FOOTER***/
+#rodape{
+	width:1150px;
+	height:500px;
+    border-radius:10px;
+	float:left;
+	background:#FFFFFF;
+	color:#FFF;
+}
+.logo_rodape{
+	width:00px;
+	height:80px;
+	float:left;
+	margin:10px;
+}
+.menu_rodape{
+	width: 500px;
+	height: 30px;
+	float: right;
+	margin: 10px;
+	color: #FFF;
+}
+.menu_rodape ul {
+    padding:0px;
+    margin:0px;
+    list-style:none;
+}
+.menu_rodape ul li { display: inline; }
+.menu_rodape ul li a {
+    padding: 2px 0px;
+    display: inline-block;
+    background-color:#EDEDED;
+    color: #333;
+	font:12px Arial;
+	margin-left:10px;
+    text-decoration: none;
+    border-bottom:0px solid #333;
+	border-radius:5px;
+}
+.menu_rodape ul li a:hover {
+    background-color:#fff;
+    color: #09f;
+    border-bottom:3px solid #09f;
+}
+  
+  
+#tudo #corpoFrameesquerdo ul div div table {
+	color: #000;
+	font-weight: bold;
+}
+table {
+	color: #000;
+}
+#tudo #rodape .menu_rodape p {
+	font-size: 14px;
+}
+#tudo #corpo h1 {
+	font-size: 9px;
+}

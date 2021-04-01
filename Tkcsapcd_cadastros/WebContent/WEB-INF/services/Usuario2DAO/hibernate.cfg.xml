@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+                                         "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+ <session-factory>
+  <!-- Configurações de Conexão com o Banco de Dados local
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="connection.url">jdbc:mysql://localhost:3306/tkcsapcd</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password">josue123</property>        
+        <property name="connection.pool_size">1</property>        
+        <property name="current_session_context_class">thread</property>--> 
+        
+ <!--Configuração  de Pool de Conexão para Produção 
+  <property name="hibernate.connection.datasource">java:/comp/env/jdbc/pool</property>
+  <property name="hibernate.current_session_context_class">thread</property>
+  <property name="hibernate.transaction.factory_class">org.hibernate.transaction.JDBCTransactionFactory</property>
+  <property name="hibernate.jdbc.batch_size">0</property>-->
+  
+  <!-- SQL dialect 
+  <property name="dialect">org.hibernate.dialect.MySQL5InnoDBDialect</property>-->
+  <!-- Cache de Segundo Nível 
+  <property name="cache.provider_class">org.hibernate.cache.internal.NoCacheProvider</property>-->
+  <!-- Mostra as SQLs geradas no conselo 
+  <property name="show_sql">true</property> -->
+  
+  <!--<property name="format_sql">true</property>  
+   <property name="use_sql_comments">true</property>-->
+   
+  <!-- Cria as tabelas do banco de dados (create, validate, update)
+  <property name="hbm2ddl.auto">create</property>-->
+  
+  <!-- Mapemamento das entidades. Executa as classes @Entity
+  <mapping class="br.com.tkcsapcd.model.bean.Teste"/>--> 
+ </session-factory>
+</hibernate-configuration>

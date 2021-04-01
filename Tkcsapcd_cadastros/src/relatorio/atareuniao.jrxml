@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="atareuniao" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" forecolor="#FFFFFF" fontName="Times New Roman" fontSize="50" isBold="false" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Times New Roman" fontSize="18" isBold="false" pdfFontName="Times-Roman"/>
+	<style name="Column header" forecolor="#666666" fontName="Times New Roman" fontSize="14" isBold="true" pdfFontName="Times-Roman"/>
+	<style name="Detail" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman"/>
+	<style name="Row" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style mode="Opaque" backcolor="#F0EFEF"/>
+		</conditionalStyle>
+	</style>
+	<subDataset name="PieChartDataset"/>
+	<field name="codigo" class="java.lang.Long"/>
+	<field name="acoestomadas" class="java.lang.String"/>
+	<field name="adicionais" class="java.lang.String"/>
+	<field name="aprovacao" class="java.lang.String"/>
+	<field name="ata" class="java.lang.String"/>
+	<field name="data" class="java.sql.Timestamp"/>
+	<field name="local" class="java.lang.String"/>
+	<field name="objetivo" class="java.lang.String"/>
+	<field name="participante" class="java.lang.String"/>
+	<field name="proximareuniao" class="java.lang.String"/>
+	<field name="topico" class="java.lang.String"/>
+	<field name="versao" class="java.lang.Long"/>
+	<field name="projetoinicio" class="br.com.tkcsapcd.model.bean.ProjetoInicio"/>
+	<background>
+		<band height="555" splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="94" splitType="Stretch">
+			<staticText>
+				<reportElement style="SubTitle" x="336" y="65" width="449" height="29"/>
+				<textElement textAlignment="Right">
+					<font fontName="Serif" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[SISPROMAPER]]></text>
+			</staticText>
+			<frame>
+				<reportElement mode="Opaque" x="-20" y="0" width="822" height="65" forecolor="#006699" backcolor="#006699"/>
+				<staticText>
+					<reportElement style="Title" x="231" y="0" width="578" height="65"/>
+					<textElement textAlignment="Justified" verticalAlignment="Middle">
+						<font fontName="Serif" size="36" isBold="false"/>
+					</textElement>
+					<text><![CDATA[ATA DE REUNIÃO]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="14" splitType="Stretch">
+			<frame>
+				<reportElement x="2" y="0" width="735" height="14"/>
+				<staticText>
+					<reportElement style="Column header" positionType="Float" x="290" y="0" width="90" height="14" forecolor="#000000"/>
+					<textElement>
+						<font fontName="Serif" size="11" isBold="true" pdfFontName="Helvetica"/>
+					</textElement>
+					<text><![CDATA[Des. Ata]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" positionType="Float" x="452" y="0" width="57" height="14" forecolor="#000000"/>
+					<textElement>
+						<font fontName="Serif" size="11" isBold="true" pdfFontName="Helvetica"/>
+					</textElement>
+					<text><![CDATA[Local]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" positionType="Float" x="563" y="0" width="44" height="14" forecolor="#000000"/>
+					<textElement>
+						<font fontName="Serif" size="11" isBold="true" pdfFontName="Helvetica"/>
+					</textElement>
+					<text><![CDATA[Versão]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" positionType="Float" x="2" y="0" width="93" height="14" forecolor="#000000"/>
+					<textElement>
+						<font fontName="Serif" size="11" isBold="true" pdfFontName="Helvetica"/>
+					</textElement>
+					<text><![CDATA[Cód. Projeto]]></text>
+				</staticText>
+			</frame>
+			<staticText>
+				<reportElement x="82" y="0" width="155" height="14"/>
+				<textElement>
+					<font fontName="Serif" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Desc. Projeto]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="15" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="4" y="14" width="798" height="1"/>
+			</line>
+			<frame>
+				<reportElement x="2" y="0" width="735" height="14"/>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Detail" positionType="Float" x="290" y="0" width="90" height="14"/>
+					<textElement>
+						<font fontName="Serif" size="11" isBold="false" pdfFontName="Helvetica"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{ata}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Detail" positionType="Float" x="452" y="0" width="57" height="14"/>
+					<textElement>
+						<font fontName="Serif" size="11" isBold="false" pdfFontName="Helvetica"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{local}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Detail" positionType="Float" x="563" y="0" width="44" height="14"/>
+					<textElement>
+						<font fontName="Serif" size="11" isBold="false" pdfFontName="Helvetica"/>
+					</textElement>
+					<textFieldExpression class="java.lang.Long"><![CDATA[$F{versao}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Detail" positionType="Float" x="2" y="0" width="43" height="14"/>
+					<textElement>
+						<font fontName="Serif" size="11" isBold="false" pdfFontName="Helvetica"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{projetoinicio}.getCodigoprojeto()]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Detail" positionType="Float" x="80" y="0" width="155" height="14"/>
+					<textElement>
+						<font fontName="Serif" size="11" isBold="false" pdfFontName="Helvetica"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{projetoinicio}.getProjeto()]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="7" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="16" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="2" y="0" width="800" height="16" forecolor="#D0B48E" backcolor="#006699"/>
+				<textField evaluationTime="Report">
+					<reportElement style="Column header" x="753" y="0" width="40" height="16" forecolor="#FFFFFF"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Serif" size="11" isBold="false" pdfFontName="Helvetica"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Column header" x="673" y="0" width="80" height="16" forecolor="#FFFFFF"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Serif" size="11" isBold="false" pdfFontName="Helvetica"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+				</textField>
+				<textField pattern="EEEEE dd MMMMM yyyy">
+					<reportElement style="Column header" x="2" y="0" width="197" height="16" forecolor="#FFFFFF"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Serif" size="11" isBold="false" pdfFontName="Helvetica"/>
+					</textElement>
+					<textFieldExpression class="java.util.Date"><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
